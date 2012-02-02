@@ -1,7 +1,10 @@
 This plugin will allow you to browse through the database of your rails app.  Any table that has a model created for it will be recognized, and any rails association such as belongs_to and has_many will show up as links on the show page for a specific row of a table.
 
 INSTALLATION:
-  -simply clone this repo into your /vendor/plugins directory (so that it will look like /vendor/plugins/database/app...) and you should be good to go
+ -simply clone this repo into your /vendor/plugins directory (so that it will look like /vendor/plugins/database/app...) and you should be good to go
+
+USAGE:
+ -just point your browser at (appname)/database and start browsing
 
 CAVEAT:
  -if your routes.rb file has a matcher for "*route_not_found" then rails may have trouble picking up the routes that this plugin adds.  For now you may have to comment that route out.  Workin on it...
