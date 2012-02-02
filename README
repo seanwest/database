@@ -3,3 +3,6 @@ This plugin will allow you to browse through the database of your rails app.  An
 INSTALLATION:
   -simply clone this repo into your /vendor/plugins directory (so that it will look like /vendor/plugins/database/app...) and you should be good to go
 
+CAVEAT:
+ -if your routes.rb file has a matcher for "*route_not_found" then rails may have trouble picking up the routes that this plugin adds.  For now you may have to comment that route out.  Workin on it...
+
