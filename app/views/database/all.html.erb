@@ -1,0 +1,5 @@
+<h1>Models</h1>
+<% @models.each do |model| %>
+  <%= link_to model.name.pluralize, "/database/#{model.name.pluralize}" %>
+  <br />
+<% end %>

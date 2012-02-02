@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Database View</title>
+  <style>
+    <%= File.open("#{File.dirname(__FILE__)}/../../../public/stylesheets/database.css").readlines.join %>
+  </style>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

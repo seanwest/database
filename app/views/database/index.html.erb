@@ -1,0 +1,4 @@
+<h1><%= @model.name.pluralize %> </h1>
+<%= render :partial => 'show_rows', 
+           :locals => {:model => @model, :rows => @model.all} %>
+

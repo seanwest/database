@@ -1,0 +1,25 @@
+<h1><%= row_name(@row).capitalize %></h1>
+
+<% @columns.each do |column| %>
+  <p>
+    <b> <%= "#{column}:" %> </b>
+    <%= @row[column] %>
+  </p>
+<% end %>
+
+
+<% @model.reflect_on_all_associations.each do |assoc| %>
+  <br>
+  <p>
+    <h3><%= "#{assoc.name.to_s.capitalize}:" %> </h3>
+    <% begin %>
+      <% rows = Array(@row.send(assoc.name))  %>
+    <% rescue %>
+      <% rows = [] %>
+    <% end %>
+    <% if rows.any? %>
+      <%= render :partial => 'show_rows',
+                 :locals => {:model => rows.first.class, :rows => rows} %>
+    <% end %>
+  </p>
+<% end %>

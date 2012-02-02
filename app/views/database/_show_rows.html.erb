@@ -1,0 +1,24 @@
+<% if rows.any? %> 
+<table>
+  <tr>
+    <% if show_name_column?(model)%>
+      <th><%= name_column_header(model) %></th>
+    <% end %>  
+    <% data_columns(model).each do |column| %>
+      <th> <%= column %> </th>
+    <% end %>
+  </tr>
+
+<% rows.each do |row| %>
+  <tr>
+    <% if show_name_column?(model) %>
+      <td><%= link_to row_name(row), "/database/#{model.name.pluralize}/#{row["id"]}" %></td>
+    <% end %>
+
+    <% data_columns(model).each do |column| %>
+      <td> <%= row[column] %> </td>
+    <% end %>
+  </tr>
+<% end %>
+</table>
+<% end #if rows.any? %>
