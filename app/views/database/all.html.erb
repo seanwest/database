@@ -1,5 +1,7 @@
 <h1>Models</h1>
+<br>
+<p>
 <% @models.each do |model| %>
   <%= link_to model.name.pluralize, "/database/#{model.name.pluralize}" %>
-  <br />
+  </p>
 <% end %>

@@ -1,7 +1,7 @@
 <h1><%= row_name(@row).capitalize %></h1>
-
+<br>
 <% @columns.each do |column| %>
-  <p>
+  <p> 
     <b> <%= "#{column}:" %> </b>
     <%= @row[column] %>
   </p>

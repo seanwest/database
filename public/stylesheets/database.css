@@ -1,4 +1,27 @@
-
+html, body {
+  font-family: sans-serif;
+}
+p {
+  margin-top: .4em;
+  margin-bottom: .4em;
+}
+h1, h2 {
+  margin-bottom: .6em;
+}
+h1 {
+  font-size: 188%;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  border-bottom: 1px solid #AAA;
+  padding-top: .5em;
+  padding-bottom: .17em;
+  margin: 0;
+}
+h3, h4, h5, h6 {
+  border-bottom: none;
+  font-weight: bold;
+}
 table {
   border-spacing: 0px 0px;
   border-collapse: separate;
