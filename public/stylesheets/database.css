@@ -34,6 +34,7 @@ td, th {
 td {
   border-top: 1px solid #555;
   padding-top: 10px;
+  white-space: nowrap;
 }
 tr:last-child td{
   border-bottom: 1px solid #555;
